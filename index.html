@@ -12,28 +12,34 @@
 
 <body>
     <div class="container ">
-        <div class="weather">
-            <h1>New York</h1>
-            <ul>
-                <li>Friday 05:00</li>
-                <li>Clear Sky</li>
-            </ul>
-            <div class="row">
-                <div class="col-6">
-                    <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="clear">
-                    12°C | °F
-                </div>
-
-                <div class="col-6">
+        <div class="weather-container">
+            <div class="weather">
+                <div class="overview">
+                    <h1>New York</h1>
                     <ul>
-                        <li>Precipitation: 0%</li>
-                        <li>Humidity: 73%</li>
-                        <li>Wind: 2km/h</li>
+                        <li>Friday 05:00</li>
+                        <li>Clear Sky</li>
                     </ul>
-
                 </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="clearfix weather-temperature">
+                            <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="clear"
+                                class="float-left">
+                            <strong>12</strong>
+                            <span class="units">°C | <a href="#">°F</a> </span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <ul>
+                            <li>Precipitation: 0%</li>
+                            <li>Humidity: 73%</li>
+                            <li>Wind: 2km/h</li>
+                        </ul>
+                    </div>
+                </div>
+                <br>
             </div>
-            <br>
             <small>
                 <a href="https://github.com/alegna19/vanilla-weather" target="_blank">Open-source code,</a> by Angie
                 Gomez
