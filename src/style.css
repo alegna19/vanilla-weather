@@ -1,3 +1,9 @@
+body {
+    font-family: "Google Sans",
+        arial,
+        sans-serif;
+}
+
 .weather {
     max-width: 600px;
     margin: 30px auto;
@@ -7,12 +13,27 @@
 }
 
 h1 {
-    color: rgb(126, 126, 128);
-    display: block;
-    font-family: "Google Sans", arial, sans-serif;
-    font-size: 22px;
+    color: rgb(97, 116, 138);
+    font-size: 26px;
     font-weight: 400;
     height: 26px;
     line-height: 26px;
-    text-align: right;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    color: rgb(154, 160, 166);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0;
+    padding: 0;
+
 }
