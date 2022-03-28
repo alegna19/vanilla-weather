@@ -28,7 +28,7 @@ li {
     line-height: 20px;
     margin: 0;
     padding: 0;
-
+    text-transform: capitalize;
 }
 
 .weather-container {
@@ -54,7 +54,7 @@ li {
 }
 
 .weather-temperature strong {
-    font-size: 64px;
+    font-size: 62px;
     color: rgb(33, 33, 33);
     font-weight: 400;
     line-height: 1;
