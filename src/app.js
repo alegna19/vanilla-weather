@@ -66,6 +66,9 @@ formElement.addEventListener("submit", handleCountry);
 
 function showFahrenheit(event) {
     event.preventDefault();
+
+    celciusElement.classList.remove("active");
+    fahrenheitElement.classList.add("active");
     let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
     let tempElement = document.querySelector("#temp");
     tempElement.innerHTML = Math.round(fahrenheitTemp);
@@ -73,6 +76,9 @@ function showFahrenheit(event) {
 
 function showCelcius(event) {
     event.preventDefault();
+
+    celciusElement.classList.add("active");
+    fahrenheitElement.classList.remove("active");
     let tempElement = document.querySelector("#temp");
     tempElement.innerHTML = Math.round(celsiusTemp);
 }
