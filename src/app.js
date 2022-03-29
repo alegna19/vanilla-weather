@@ -88,3 +88,5 @@ fahrenheitElement.addEventListener("click", showFahrenheit);
 
 let celciusElement = document.querySelector("#celcius");
 celciusElement.addEventListener("click", showCelcius);
+
+search("London");
