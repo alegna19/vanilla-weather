@@ -17,6 +17,9 @@ function formatDate(timestamp) {
 function displayTemperature(response) {
     let countryValue = response.data.name;
     let descriptionValue = response.data.weather[0].description;
+
+    celsiusTemp = Math.round(response.data.main.temp);
+
     let temperatureValue = Math.round(response.data.main.temp);
     let humidityValue = response.data.main.humidity;
     let windVale = Math.round(response.data.wind.speed);
@@ -54,5 +57,28 @@ function handleCountry(event) {
     search(cityInputElement.value);
 }
 
+let celsiusTemp = " ";
+
 let formElement = document.querySelector("#search-form");
 formElement.addEventListener("submit", handleCountry);
+
+//Convert to fahrenheit
+
+function showFahrenheit(event) {
+    event.preventDefault();
+    let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+    let tempElement = document.querySelector("#temp");
+    tempElement.innerHTML = Math.round(fahrenheitTemp);
+}
+
+function showCelcius(event) {
+    event.preventDefault();
+    let tempElement = document.querySelector("#temp");
+    tempElement.innerHTML = Math.round(celsiusTemp);
+}
+
+let fahrenheitElement = document.querySelector("#fahrenheit");
+fahrenheitElement.addEventListener("click", showFahrenheit);
+
+let celciusElement = document.querySelector("#celcius");
+celciusElement.addEventListener("click", showCelcius);
