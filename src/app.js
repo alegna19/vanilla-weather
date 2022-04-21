@@ -14,13 +14,15 @@ function formatDate(timestamp) {
     return `${day} ${hours}:${minutes}`
 }
 
-function displayForecast() {
+//Dinamic add forecast on the form.
+function displayForecast(response) {
+    console.log(response.data.daily)
     let forecastElement = document.querySelector('#weather-forecast');
 
     let forecastHTML = `<div class="row">`;
     let days = ["Thu", "Fri", "Sat", "Sun"];
 
-    days.forEach(function (day) {
+    days.forEach(day => {
         forecastHTML = forecastHTML + `
             <div class="col-2">
                 <div class="weather-forecast-date">${day}</div>
@@ -35,6 +37,13 @@ function displayForecast() {
     forecastHTML = forecastHTML + `</div>`
     forecastElement.innerHTML = forecastHTML;
 
+}
+
+function getForecast(coordinates) {
+    let apiKey = "a47fcb32fa31c2cf0799e4cfc995447f";
+    let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+    console.log(apiURL);
+    axios.get(apiURL).then(displayForecast);
 }
 
 function displayTemperature(response) {
@@ -64,6 +73,8 @@ function displayTemperature(response) {
     //Date
     let dateElement = document.querySelector("#date");
     dateElement.innerHTML = formatDate(response.data.dt * 1000);
+
+    getForecast(response.data.coord);
 }
 
 //Search Country
@@ -112,6 +123,6 @@ fahrenheitElement.addEventListener("click", showFahrenheit);
 let celciusElement = document.querySelector("#celcius");
 celciusElement.addEventListener("click", showCelcius);
 
-displayForecast();
+
 
 search("London");
