@@ -38,12 +38,13 @@ li:first-letter {
 .weather-container {
     max-width: 600px;
     margin: 30px auto;
-    background: rgb(87, 200, 201);
-    background: linear-gradient(0deg, rgba(87, 200, 201, 1) 0%, rgba(238, 209, 146, 1) 100%);
+    /* background: rgb(243, 245, 245); */
+    /* background: linear-gradient(0deg, rgba(87, 200, 201, 1) 0%, rgba(238, 209, 146, 1) 100%); */
 }
 
 .weather {
     padding: 20px;
+    border: 1px solid rgb(139, 189, 230);
     border-radius: 7px;
 }
 
@@ -98,6 +99,11 @@ li:first-letter {
 .weather-forecast-date {
     font-size: 16px;
     text-align: center;
+    opacity: 0.6;
+}
+
+.whater-forecast-tempMim {
+    opacity: 0.3;
 }
 
 .weather-forecast-temperatures {
