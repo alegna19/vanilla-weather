@@ -101,37 +101,35 @@ function handleCountry(event) {
     search(cityInputElement.value);
 }
 
-let celsiusTemp = " ";
+// let celsiusTemp = " ";
 
 let formElement = document.querySelector("#search-form");
 formElement.addEventListener("submit", handleCountry);
 
 //Convert to fahrenheit
 
-function showFahrenheit(event) {
-    event.preventDefault();
+// function showFahrenheit(event) {
+//     event.preventDefault();
 
-    celciusElement.classList.remove("active");
-    fahrenheitElement.classList.add("active");
-    let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
-    let tempElement = document.querySelector("#temp");
-    tempElement.innerHTML = Math.round(fahrenheitTemp);
-}
+//     celciusElement.classList.remove("active");
+//     fahrenheitElement.classList.add("active");
+//     let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+//     let tempElement = document.querySelector("#temp");
+//     tempElement.innerHTML = Math.round(fahrenheitTemp);
+// }
 
-function showCelcius(event) {
-    event.preventDefault();
+// function showCelcius(event) {
+//     event.preventDefault();
 
-    celciusElement.classList.add("active");
-    fahrenheitElement.classList.remove("active");
-    let tempElement = document.querySelector("#temp");
-    tempElement.innerHTML = Math.round(celsiusTemp);
-}
+//     celciusElement.classList.add("active");
+//     fahrenheitElement.classList.remove("active");
+//     let tempElement = document.querySelector("#temp");
+//     tempElement.innerHTML = Math.round(celsiusTemp);
+// }
 
-let fahrenheitElement = document.querySelector("#fahrenheit");
-fahrenheitElement.addEventListener("click", showFahrenheit);
 
-let celciusElement = document.querySelector("#celcius");
-celciusElement.addEventListener("click", showCelcius);
+// let celciusElement = document.querySelector("#celcius");
+// celciusElement.addEventListener("click", showCelcius);
 
 
 
